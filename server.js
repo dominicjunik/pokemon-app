@@ -21,7 +21,11 @@ res.send('Welcome to the pokemon app')
 })
 
 app.get('/pokemon', (req, res) => {
-   res.render('Index')
+   res.render('Index', { pokemon: pokemon })
+})
+
+app.get('/pokemon/:id', (req, res) => {
+    res.send(req.params.id)
 })
 
 app.listen(PORT, () => {
