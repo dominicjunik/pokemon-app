@@ -10,8 +10,9 @@ export default function Index({ pokemon }) {
         <div style={myStyle}>
             <h1>See all the pokemon!</h1>
             <ul>
-                {pokemon.map( (poke) => <li>{poke.name[0].toUpperCase() + poke.name.slice(1)}</li>)}
+                {pokemon.map( (poke, index) => <li><a href={`/pokemon/${index}`}>{poke.name[0].toUpperCase() + poke.name.slice(1)}</a></li>)}
             </ul>
         </div>
     )
 }
+
