@@ -12,7 +12,7 @@ let name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
         <div style={myStyle}>
             <h1>Gotta Catch 'Em All</h1>
             <h2>{name}</h2>
-            <img src={`${pokemon.img}.jpg`} alt="image of pokemon" />
+            <img src={`${pokemon.img}.jpg`} alt="image of pokemon, did you spell the name right?" />
             <br />
             <a href="/pokemon" style={{color: 'cyan', textDecoration: 'none'}}>BACK</a>
            

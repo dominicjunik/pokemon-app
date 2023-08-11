@@ -66,7 +66,7 @@ app.delete('/pokemon/:id', async (req, res) => {
 
 app.post('/pokemon', async (req, res) => {
     let pokemon = req.body
-    pokemon.img = `http://img.pokemondb.net/artwork/${pokemon.name}`
+    pokemon.img = `http://img.pokemondb.net/artwork/${pokemon.name.toLowerCase()}`
 
     try {
         await Pokemons.create(pokemon)
