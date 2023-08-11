@@ -16,6 +16,9 @@ let name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
             <br />
             <a href="/pokemon" style={{color: 'cyan', textDecoration: 'none'}}>BACK</a>
            
+            <form action={`/pokemon/${pokemon._id}?_method=DELETE`} method="POST" >
+                <button>Delete</button>
+            </form>
         </div>
     )
 }
